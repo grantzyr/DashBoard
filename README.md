@@ -1,5 +1,5 @@
 # Help_Functions_Python
-## 1. data structure
+## 1. data structure v 0.1.0
 1. MyArray					ArrayList列表
 2. NodeS					单向链表创建节点
 3. LinkedList				单向链表
