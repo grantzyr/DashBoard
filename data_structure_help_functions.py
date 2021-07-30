@@ -1,23 +1,23 @@
 
 """
-包含的 class:
-1. MyArray					自定义ArrayList列表
-2. prev_node				创建节点
-3. NodeS					单向链表创建节点
-4. LinkedList				单向链表
-5. NodeD					双向链表创建节点
-6. DoubleLinkedList			双向链表
-7. MyQueue					队列
+1. MyArray				ArrayList列表
+2. NodeS				单向链表创建节点
+3. LinkedList				单向链表
+4. NodeD				双向链表创建节点
+5. DoubleLinkedList			双向链表
+6. MyQueue				队列
+7. TreeNode				二叉树创建节点
+8. BinaryTree				二叉树
 """
 
-# 自定义List
+# ArrayList列表
 class MyArray(object):
 	"""
-	1. init(capacity)						初始化
-	2. resize()								扩容
+	1. init(capacity)					初始化
+	2. resize()						扩容
 	3. insert(index, element)				指定位置插入
-	4. remove(index)						指定位置删除
-	5. output()								遍历并打印
+	4. remove(index)					指定位置删除
+	5. output()						遍历并打印
 	"""
 	def __init__(self, capacity):
 		self.array = [None] * capacity
@@ -71,19 +71,19 @@ class NodeS(object):
 # 单向链表
 class LinkedList(object):
 	"""
-	1. init()								初始化无node
+	1. init()					初始化
 	2. is_empty()	# return True/False		是否为空链表
 	3. get(index) # return node 			根据下标获取节点
 	4. get_node(data) # return node			根据节点数据获取节点
 	5. get_index(data) # retrun index		根据节点数据获取下标
-	6. insert(node, index) 					插入node到指定位置
-	7. add(node)							头插入
-	8. append(node)							尾插入
-	9. update(data, index)					根据节点下标更新节点数据
-	9. travel()								遍历并打印所有node
+	6. insert(node, index) 				插入node到指定位置
+	7. add(node)					头插入
+	8. append(node)					尾插入
+	9. update(data, index)				根据节点下标更新节点数据
+	9. travel()					遍历并打印所有node
 	10. remove(index) # return node 		删除指定位置node
-	11. extend(LinkedList)					合并链表
-	12. clear()								清空链表
+	11. extend(LinkedList)				合并链表
+	12. clear()					清空链表
 	"""
 	def __init__(self):
 		""" 初始化无node """	
@@ -235,19 +235,19 @@ class NodeD(object):
 # 双向链表
 class DoubleLinkedList(object):
 	"""
-	1. init()								初始化无node
+	1. init()					初始化
 	2. is_empty()	# return True/False		是否为空链表
 	3. get(index) # return node 			根据下标获取节点
 	4. get_node(data) # return node			根据节点数据获取节点
 	5. get_index(data) # retrun index		根据节点数据获取下标
-	6. insert(node, index) 					插入node到指定位置
-	7. add(node)							头插入
-	8. append(node)							尾插入
-	9. update(data, index)					根据节点下标更新节点数据
-	9. travel()								遍历并打印所有node
+	6. insert(node, index) 				插入node到指定位置
+	7. add(node)					头插入
+	8. append(node)					尾插入
+	9. update(data, index)				根据节点下标更新节点数据
+	9. travel()					遍历并打印所有node
 	10. remove(index) # return node 		删除指定位置node
-	11. extend(LinkedList)					合并链表
-	12. clear()								清空链表
+	11. extend(LinkedList)				合并链表
+	12. clear()					清空链表
 	"""
 	def __init__(self):
 		""" 初始化无node """	
@@ -404,19 +404,30 @@ class DoubleLinkedList(object):
 		self.tail = None
 		self.size = 0
 
+
+# 队列
 class MyQueue(object):
+	""" 
+	1. init(capacity)			初始化
+	2. enqueue(element)			入队
+	3. dequeue(element)			出队
+	4. output()				遍历
+	"""
 	def __init__(self, capacity):
+		""" 初始化 """
 		self.list = [None] * capacity
 		self.front = 0
 		self.rear = 0
 
 	def enqueue(self, element):
+		""" 入队 """
 		if(self.rear+1) % len(self.list) == self.front:
 			raise Exception("队列已满！")
 		self.list[self.rear] = element
 		self.rear = (self.rear+1) % len(self.list)
 
 	def dequeue(self):
+		""" 出队 """
 		if self.rear == self.rear == self.front:
 			raise Exception("队列已满！")
 		dequeue_element = self.list[self.front]
@@ -424,8 +435,130 @@ class MyQueue(object):
 		return dequeue_element
 
 	def output(self):
+		""" 遍历 """
 		i = self.front
 		while i != self.rear:
 			print(self.list[i])
 			i = (i+1) % len(self.list)
 
+# Node for binary tree
+class TreeNode(object):
+	def __init__(self, data):
+		self.data = data
+		self.left = None
+		self.right = None
+
+
+# Binary Tree 二叉树
+"""
+1. create_binary_tree(list) return node 		构建二叉树
+2. pre_order_traversal(node)				前序遍历递归
+3. in_order_traversal(node)				中序遍历递归
+4. post_order_traversal(node)				后序遍历递归
+5. pre_order_traversal_by_stack(node)			前序遍历非递归
+6. in_order_traversal_by_stack(node)			前序遍历非递归
+7. post_order_traversal_by_stack(node)			前序遍历非递归
+8. level_order_traversal(node)				层序遍历递归
+9. level_order_traversal_by_queue(node)			层序遍历队列
+"""
+def create_binary_tree(input_list=[]):
+	""" 构建二叉树 """
+	if input_list is None or len(input_list) == 0:
+		return None
+	data = input_list.pop(0)
+	if data is None:
+		return None
+	node = TreeNode(data)
+	node.left = create_binary_tree(input_list)
+	node.right = create_binary_tree(input_list)
+	return node
+
+def pre_order_traversal(node):
+	""" 前序遍历 """
+	if node is None:
+		return
+	print(node.data)
+	pre_order_traversal(node.left)
+	pre_order_traversal(node.right)
+	return node
+
+def in_order_traversal(node):
+	""" 中序遍历 """
+	if node is None:
+		return
+	in_order_traversal(node.left)
+	print(node.data)
+	in_order_traversal(node.right)
+	return node 
+
+def post_order_traversal(node):
+	""" 后序遍历 """
+	if node is None:
+		return
+	post_order_traversal(node.left)
+	post_order_traversal(node.right)
+	print(node.data)
+	return node 
+
+def pre_order_traversal_by_stack(node):
+	""" 前序遍历 """
+	stack = []
+	while(node is not None or len(stack) > 0):
+		while(node is not None):
+			print(node.data)
+			stack.append(node)
+			node = node.left
+		if len(stack)>0:
+			node = stack.pop()
+			node = node.right
+
+def in_order_traversal_by_stack(node):
+	""" 中序遍历 """
+	stack = []
+	while(node is not None or len(stack) > 0):
+		while(node is not None):
+			stack.append(node)
+			node = node.left
+		if len(stack)>0:
+			node = stack.pop()
+			print(node.data)
+			node = node.right
+
+def post_order_traversal_by_stack(node):
+	""" 后序遍历 """
+	stack = []
+	parent = []
+	while(node is not None or len(stack) > 0):
+		while(node is not None):
+			stack.append(node)
+			node = node.left
+		if len(stack)>0:
+			node = stack.pop()
+			if node.right is None:
+				print(node.data)
+				if len(parent) > 0:
+					print(parent.pop().data)
+			else:
+				parent.append(node)
+			node = node.right
+	while(len(parent)>0):
+		print(parent.pop().data)
+
+
+def level_order_traversal(node):
+	""" 层序遍历 """
+	# TODO
+
+from queue import Queue
+
+def level_order_traversal_by_queue(node):
+	""" 层序遍历 """
+	queue = Queue()
+	queue.put(node)
+	while(not queue.empty()):
+		node = queue.get()
+		print(node.data)
+		if node.left is not None:
+			queue.put(node.left)
+		if node.right is not None:
+			queue.put(node.right)
