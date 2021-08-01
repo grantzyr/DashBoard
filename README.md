@@ -8,3 +8,4 @@
 6. MyQueue					    队列
 7. TreeNode             二叉树创建节点
 8. BinaryTree           二叉树
+9. BinaryHeap           二叉堆
