@@ -31,6 +31,7 @@
 16. PPR
 17. NN
 18. Splines - polynomials
+
 **classification**
 19. scale 
 20. KNN
