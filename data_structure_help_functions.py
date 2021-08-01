@@ -8,6 +8,7 @@
 6. MyQueue				队列
 7. TreeNode				二叉树创建节点
 8. BinaryTree				二叉树
+9. BinaryHeap 				二叉堆
 """
 
 # ArrayList列表
@@ -562,3 +563,48 @@ def level_order_traversal_by_queue(node):
 			queue.put(node.left)
 		if node.right is not None:
 			queue.put(node.right)
+
+# Binary Heap 二叉堆
+"""
+1. up_adjust(array)					二叉堆尾节点上浮
+2. down_adjust(parent_index, length, array)		二叉堆节点下沉
+3. build_heap(array)					构建二叉堆
+"""
+
+def up_adjust(array=[]):
+	""" 二叉堆尾节点上浮 """
+	child_index = len(array) - 1
+	parent_index = (child_index - 1) // 2
+	# temp 保存插入的叶子节点值，用来最后赋值
+	temp = array[child_index]
+	while child_index > 0 and temp < array[parent_index]:
+		# 无需真正交换，仅进行单向赋值
+		array[child_index] = array[parent_index]
+		child_index = parent_index
+		parent_index = (parent_index -1) // 2
+
+	array[child_index] = temp
+
+def down_adjust(parent_index, length, array=[]):
+	""" 二叉堆节点下沉 """
+	# temp 保存父节点值，用于最后的赋值
+	temp = array[parent_index]
+	child_index = 2 * parent_index + 1
+	while child_index < length:
+		# 如果有右子节点，且右子节点的值小于左子节点的值，则定位到右子节点
+		if child_index + 1 < length and array[child_index + 1] < array[child_index]:
+			child_index += 1
+		# 如果父节点值小于任何一个子节点的值，break
+		if temp <= array[child_index]:
+			break
+		# 无需交换，单向赋值
+		array[parent_index] = array[child_index]
+		parent_index = child_index
+		child_index = 2 * child_index + 1
+
+	array[parent_index] = temp
+
+def build_heap(array=[]):
+	""" 二叉堆的构建 """
+	for i in range((len(array)-2) // 2, -1, -1):
+		down_adjust(i, len(array), array)
