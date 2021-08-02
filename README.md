@@ -9,6 +9,8 @@
 7. TreeNode             二叉树创建节点
 8. BinaryTree           二叉树
 9. BinaryHeap           二叉堆
+10. MaxPriorityQueue    最大优先队列
+11. MinPriorityQueue    最小优先队列
 
 
 
