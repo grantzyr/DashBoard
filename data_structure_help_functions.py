@@ -9,6 +9,8 @@
 7. TreeNode				二叉树创建节点
 8. BinaryTree				二叉树
 9. BinaryHeap 				二叉堆
+10. MaxPriorityQueue			最大优先队列
+11. MinPriorityQueue			最小优先队G列
 """
 
 # ArrayList列表
@@ -608,3 +610,121 @@ def build_heap(array=[]):
 	""" 二叉堆的构建 """
 	for i in range((len(array)-2) // 2, -1, -1):
 		down_adjust(i, len(array), array)
+		
+# 最大优先队列
+class MaxPriorityQueue(object):
+    """
+    1. init()                   初始化
+    2. enqueue(element)         入队
+    3. dequeue()                出队
+    4. up_adjust()              上浮
+    5. down_adjust()            下沉
+    """
+
+    def __init__(self):
+        """ 初始化 """ 
+        self.array = []
+        self.size = 0
+    
+    def enqueue(self, element):
+        """ 入队 """
+        self.array.append(element)
+        self.size += 1
+        self.up_adjust()
+
+    def dequeue(self):
+        """ 出队 """
+        if self.size < 0:
+            raise Exception("Queue is empty!!")
+        head = self.array[0]
+        self.array[0] = self.array[self.size-1]
+        self.size -= 1
+        self.down_adjust()
+        return head
+    
+    def up_adjust(self):
+        """ 上浮 """
+        child_index = self.size - 1
+        parent_index = (child_index - 1) // 2
+        tmp = self.array[child_index]
+        while(child_index > 0 and tmp > self.array[parent_index]):
+            self.array[child_index] = self.array[parent_index]
+            child_index = parent_index
+            parent_index = (child_index - 1) // 2
+        self.array[child_index] = tmp
+
+    def down_adjust(self):
+        """ 下沉 """
+        parent_index = 0
+        child_index = 2*parent_index + 1
+        tmp = self.array[parent_index]
+        while(child_index < self.size):
+            if(child_index+1 < self.size and self.array[child_index] < self.array[child_index + 1]):
+                child_index += 1
+            if tmp >= self.array[child_index]:
+                break
+
+            self.array[parent_index] = self.array[child_index]
+            parent_index = child_index
+            child_index = 2 * child_index + 1
+
+        self.array[parent_index] = tmp
+
+# 最小优先队列
+class MinPriorityQueue(object):
+    """
+    1. init()                   初始化
+    2. enqueue(element)         入队
+    3. dequeue()                出队
+    4. up_adjust()              上浮
+    5. down_adjust()            下沉
+    """
+
+    def __init__(self):
+        """ 初始化 """ 
+        self.array = []
+        self.size = 0
+    
+    def enqueue(self, element):
+        """ 入队 """
+        self.array.append(element)
+        self.size += 1
+        self.up_adjust()
+
+    def dequeue(self):
+        """ 出队 """
+        if self.size < 0:
+            raise Exception("Queue is empty!!")
+        head = self.array[0]
+        self.array[0] = self.array[self.size-1]
+        self.size -= 1
+        self.down_adjust()
+        return head
+    
+    def up_adjust(self):
+        """ 上浮 """
+        child_index = self.size - 1
+        parent_index = (child_index - 1) // 2
+        tmp = self.array[child_index]
+        while(child_index > 0 and tmp < self.array[parent_index]):
+            self.array[child_index] = self.array[parent_index]
+            child_index = parent_index
+            parent_index = (child_index - 1) // 2
+        self.array[child_index] = tmp
+
+    def down_adjust(self):
+        """ 下沉 """
+        parent_index = 0
+        child_index = 2*parent_index + 1
+        tmp = self.array[parent_index]
+        while(child_index < self.size):
+            if(child_index+1 < self.size and self.array[child_index] > self.array[child_index + 1]):
+                child_index += 1
+            if tmp <= self.array[child_index]:
+                break
+
+            self.array[parent_index] = self.array[child_index]
+            parent_index = child_index
+            child_index = 2 * child_index + 1
+
+        self.array[parent_index] = tmp
