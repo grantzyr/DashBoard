@@ -728,3 +728,4 @@ class MinPriorityQueue(object):
             child_index = 2 * child_index + 1
 
         self.array[parent_index] = tmp
+
