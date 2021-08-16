@@ -1,5 +1,6 @@
+"                                                                  "Grant"
 "=========================================================================="
-" "CONTENTS                                              setting-contents"
+" "CONTENTS                                                  vim-contents"
 
 " "01. Plug setting ............................................ s-plugin"
 " "02. General setting ....................................... s-gsetting"
@@ -178,6 +179,9 @@ nnoremap <S-TAB> :bprevious<CR>
 "**************************************************************************"
 " PYTHON                                                  gmappings-python
 " autocmd FileType python
+
+" Ctrl + i 运行python文件
+autocmd FileType python nnoremap <buffer> <C-i> :!python % <CR>
 
 "**************************************************************************"
 " MARKDOWN                                              gmappings-markdown
