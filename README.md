@@ -1,16 +1,16 @@
 # Help_Functions_Python
-## 1. data structure v 0.1.2
-1. MyArray					    ArrayList列表
-2. NodeS					      单向链表创建节点
-3. LinkedList				    单向链表
-4. NodeD					      双向链表创建节点
-5. DoubleLinkedList			双向链表
-6. MyQueue					    队列
-7. TreeNode             二叉树创建节点
-8. BinaryTree           二叉树
-9. BinaryHeap           二叉堆
-10. MaxPriorityQueue    最大优先队列
-11. MinPriorityQueue    最小优先队列
+## 1. data structure
+1. MyArray
+2. NodeS
+3. LinkedList
+4. NodeD
+5. DoubleLinkedList
+6. MyQueue
+7. TreeNode
+8. BinaryTree
+9. BinaryHeap
+10. MaxPriorityQueue
+11. MinPriorityQueue
 
 
 
