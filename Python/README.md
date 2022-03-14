@@ -1,5 +1,5 @@
 # Python Help Functions
-## data_structure_help_functions.py
+## [data_structure_help_functions.py](https://github.com/grantzyr/help_functions/blob/main/Python/data_structure_help_functions.py)
 1. MyArray
 2. NodeS
 3. LinkedList

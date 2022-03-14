@@ -1,5 +1,5 @@
 # R Help Functions
-## ML_help_functions_R.R
+## [ML_help_functions_R.R](https://github.com/grantzyr/help_functions/blob/main/R/ML_help_functions_R.R)
 1. Generate random numbers from a distribution
 2. Confidence Intervals of Binomial Data
 3. Regular Linear Regression Models
