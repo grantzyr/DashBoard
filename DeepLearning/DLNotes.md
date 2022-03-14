@@ -1,10 +1,10 @@
 # Deep Learning Notes
 ## Multi-layer Neural Networks
 ### Perceptron 感知器
-- 输入信号(x1, x2, ...xm) -> 突触权值(w1, w2, ...Wm) -> bias(b) -> 激活函数φ() -> 输出 yi ![image-1](https://github.com/grantzyr/help_functions/blob/main/DeepLearning/images/image-1.jpg) ![image-2](https://github.com/grantzyr/help_functions/blob/main/DeepLearning/images/image-2.jpg)
-- the decision rule ![image-3](https://github.com/grantzyr/help_functions/blob/main/DeepLearning/images/image-3.jpg)
-- if example can be correctly classified ![image-4](https://github.com/grantzyr/help_functions/blob/main/DeepLearning/images/image-4.jpg)
-- 分类错误会有损失，M是分错的集合。Objective function of Perceptron can be written as: ![image-5](https://github.com/grantzyr/help_functions/blob/main/DeepLearning/images/image-5.jpg)
+- 输入信号(x1, x2, ...xm) -> 突触权值(w1, w2, ...Wm) -> bias(b) -> 激活函数φ() -> 输出 yi ![image-1](./images/image-1.jpg) ![image-2](./images/image-2.jpg)
+- the decision rule ![image-3](./images/image-3.jpg)
+- if example can be correctly classified ![image-4](./images/image-4.jpg)
+- 分类错误会有损失，M是分错的集合。Objective function of Perceptron can be written as: ![image-5](./images/image-5.jpg)
 - 用梯度下降来解决优化问题 Gradient descent to solve the optimization problem. ![image-6](./images/image-6.jpg)
 - 局限性：由于激活函数使用的sign，导致感知器是线性函数，无法拟合非线性数据
 
