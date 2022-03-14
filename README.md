@@ -1,10 +1,10 @@
 # Help Functions
 ## [Deep Learning](https://github.com/grantzyr/help_functions/tree/main/DeepLearning)
-- Notes 
-- Multi-Layer Perceptron
+- [Notes](https://github.com/grantzyr/help_functions/blob/main/DeepLearning/DLNotes.md) 
+- Multi-layer Perceptron
 
 ## [NLP](https://github.com/grantzyr/help_functions/tree/main/NLP)
-- Notes
+- [Notes](https://github.com/grantzyr/help_functions/blob/main/NLP/NLPNotes.md)
 
 
 ## [Python](https://github.com/grantzyr/help_functions/tree/main/Python)
