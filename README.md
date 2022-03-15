@@ -1,19 +1,24 @@
 # Dashboard
-## [Deep Learning](./DeepLearning)
-- [Notes](./DeepLearning/DLNotes.md) 
-- Multi-layer Perceptron
+## Python
+- [Data Structure and Algorithm](./Python/Algorithm)
+- [The Data Analysis](./Python/DA)
+  - [Project: Classification modelling in forecast of Coronavirus in S.Korean](https://github.com/grantzyr/Classification-modelling-in-forecast-of-Coronavirus-in-S.Korean.)
+- [The Data Analysis](.Python/DA)
+- [Deep Learning](./Python/DeepLearning)
+    - [Natural Language Processing](./Python/NLP)
+    - [Comupter Vision](./Python/CV)
+        - [Project: TheChars74KClassifier](https://github.com/grantzyr/TheChars74KClassifier)
 
-## [NLP](./NLP)
-- [Notes](./NLP/NLPNotes.md)
+## R
+- [Machine learning](./R)
+  - Project: Analysis of Employee Turnover Rate
 
-
-## [Python](./Python)
-- [Data structure](./Python/data_structure_help_functions.py)
-
-
-## [R](./R)
-- [Machine learning](./R/ML_help_functions_R.R)
-
-
-## [Neovim](./Neovim)
+## Neovim
 - [Setting](./Neovim/neovim_setup_v1.vim)
+- [NoVim](https://github.com/grantzyr/NoVim)
+
+## Neo4j
+- [Project: Course Selection System](https://github.com/grantzyr/Neo4j_courses_selection_system)
+
+## PgSQL
+- [Project: Brisbane Olympics System](https://github.com/grantzyr/Brisbane-Olympics-System/tree/main)
