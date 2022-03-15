@@ -1,19 +1,19 @@
-# Help Functions
-## [Deep Learning](https://github.com/grantzyr/help_functions/tree/main/DeepLearning)
-- [Notes](https://github.com/grantzyr/help_functions/blob/main/DeepLearning/DLNotes.md) 
+# Dashboard
+## [Deep Learning](./DeepLearning)
+- [Notes](./DeepLearning/DLNotes.md) 
 - Multi-layer Perceptron
 
-## [NLP](https://github.com/grantzyr/help_functions/tree/main/NLP)
-- [Notes](https://github.com/grantzyr/help_functions/blob/main/NLP/NLPNotes.md)
+## [NLP](./NLP)
+- [Notes](./NLP/NLPNotes.md)
 
 
-## [Python](https://github.com/grantzyr/help_functions/tree/main/Python)
-- [Data structure](https://github.com/grantzyr/help_functions/blob/main/Python/data_structure_help_functions.py)
+## [Python](./Python)
+- [Data structure](./Python/data_structure_help_functions.py)
 
 
-## [R](https://github.com/grantzyr/help_functions/tree/main/R)
-- [Machine learning](https://github.com/grantzyr/help_functions/blob/main/R/ML_help_functions_R.R)
+## [R](./R)
+- [Machine learning](./R/ML_help_functions_R.R)
 
 
-## [Neovim](https://github.com/grantzyr/help_functions/tree/main/Neovim)
-- [Setting](https://github.com/grantzyr/help_functions/blob/main/Neovim/neovim_setup_v1.vim)
+## [Neovim](./Neovim)
+- [Setting](./Neovim/neovim_setup_v1.vim)
