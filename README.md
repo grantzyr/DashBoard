@@ -1,13 +1,12 @@
 # Dashboard
 ## Python
 - [Data Structure and Algorithm](./Python/Algorithm)
-- [The Data Analysis](./Python/DA)
-  - [Project: Classification modelling in forecast of Coronavirus in S.Korean](https://github.com/grantzyr/Classification-modelling-in-forecast-of-Coronavirus-in-S.Korean.)
-- [The Data Analysis](.Python/DA)
 - [Deep Learning](./Python/DeepLearning)
     - [Natural Language Processing](./Python/NLP)
     - [Comupter Vision](./Python/CV)
         - [Project: TheChars74KClassifier](https://github.com/grantzyr/TheChars74KClassifier)
+- [The Data Analysis](./Python/DA)
+  - [Project: Classification modelling in forecast of Coronavirus in S.Korean](https://github.com/grantzyr/Classification-modelling-in-forecast-of-Coronavirus-in-S.Korean.)
 
 ## R
 - [Machine learning](./R)
