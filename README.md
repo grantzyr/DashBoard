@@ -5,6 +5,8 @@
     - [Natural Language Processing](./Python/NLP)
     - [Comupter Vision](./Python/CV)
         - [Project: TheChars74KClassifier](https://github.com/grantzyr/TheChars74KClassifier)
+    - Recommended reading
+      - [DeepLearning Tutorial](https://github.com/Mikoto10032/DeepLearning) The author: [Mikoto10032](https://github.com/Mikoto10032)
 - [The Data Analysis](./Python/DA)
   - [Project: Classification modelling in forecast of Coronavirus in S.Korean](https://github.com/grantzyr/Classification-modelling-in-forecast-of-Coronavirus-in-S.Korean.)
 
