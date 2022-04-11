@@ -17,10 +17,6 @@
 - [Machine learning](./R)
   - Project: Analysis of Employee Turnover Rate
 
-## Vim
-- [Setting](./Vim/neovim_setup_v1.vim)
-- [NoVim](https://github.com/grantzyr/NoVim)
-
 ## Neo4j
 - [Project: Course Selection System](https://github.com/grantzyr/Neo4j_courses_selection_system)
 
