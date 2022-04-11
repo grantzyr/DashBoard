@@ -17,6 +17,9 @@
 - [Machine learning](./R)
   - Project: Analysis of Employee Turnover Rate
 
+## Java
+- [Rogue](https://github.com/grantzyr/Rogue)
+
 ## Neo4j
 - [Project: Course Selection System](https://github.com/grantzyr/Neo4j_courses_selection_system)
 
